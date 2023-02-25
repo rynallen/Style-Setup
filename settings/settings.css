@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', system-ui, sans-serif;
+  color: black;
+  background-color: rgb(224, 224, 224);
+}
+
+main {
+  padding: 50px;
+}
+
+/* ===================================== */
+
+.setting-section {
+  width: 1200px;
+  border-radius: 4px;
+}
+
+/* Section Header ========================== */
+
+.setting-section-header {
+  width: 100%;
+  display: flex;
+  padding: 16px 32px;
+  align-items: center;
+  justify-content: start;
+  background: linear-gradient(180deg, rgba(45, 44, 43, 0.88) 0%, #2d2c2b 100%);
+  border-radius: 4px 4px 0 0;
+}
+
+.setting-title-and-desc {
+  display: flex;
+  align-items: baseline;
+}
+
+.setting-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 6px;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(105.11deg, #353535 21.14%, #2c2c2c 60.63%);
+  border: 1px solid #232323;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+}
+
+.styled-icon {
+  fill: orange;
+}
+
+.setting-section-title {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.setting-section-desc {
+  font-size: 14px;
+  color: rgb(190, 190, 190);
+}
+
+/* Setting Section Content ================== */
+.setting-section-content {
+  background-color: white;
+  border-radius: 4px;
+}
+
+/* Setting Item ============================= */
+
+.setting-grid {
+  display: grid;
+  column-gap: 2rem;
+  row-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  padding: 32px;
+}
+
+.setting-grid-column {
+  grid-column: span 1;
+}
+
+.setting-item {
+  height: 140px;
+  display: flex;
+}
+
+.setting-item-label {
+  margin-bottom: 2px;
+  font-weight: 500;
+}
+
+.setting-item-namevalue {
+  width: 250px;
+  margin-right: 2rem;
+}
+
+.setting-item-desc {
+  width: 250px;
+  font-size: 14px;
+  color: rgb(138, 138, 138);
+}
+
+/* Horizontal & Vertical Divider ========================================== */
+
+.vertical-divider,
+.horizontal-divider {
+  background: lightgrey;
+}

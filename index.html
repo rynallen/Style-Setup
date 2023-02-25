@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-grid.min.css"
+      integrity="sha512-cKoGpmS4czjv58PNt1YTHxg0wUDlctZyp9KUxQpdbAft+XqnyKvDvcGX0QYCgCohQenOuyGSl8l1f7/+axAqyg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+      integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap-reboot.min.css"
+      integrity="sha512-wV3xzHEw4kJUF4G0fyXSefKmUVhwwbOdZinJvOxmysxAXSZBl17porgPOcQBDBQTEwgGevxXGWAAQ/UPaSd0nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="st-core.min.css" />
+  </head>
+  <body>
+    <main>
+    <div class="st-main-nav-container d-flex bg-gray-900 px-2 align-items-center">
+    <div class="mr-4">
+        <a href="/">
+            <img height="40" width="140" src="/Images/smarttag_hor_logo.png" alt="SMART tag Admin Portal">
+        </a>
+    </div>
+    <ul class="st-main-nav font-bold list-unstyled d-flex text-gray-500 mb-0">
+        <li class="py-2 px-3 mx-1" data-target="stMainNavLiveTraffic">Live Traffic</li>
+        <li class="py-2 px-3 mx-1" data-target="stMainNavActivity">Activity</li>
+        <li class="py-2 px-3 mx-1" data-target="stMainNavStudents">Students</li>
+        <li class="py-2 px-3 mx-1" data-target="stMainNavRoutes">Routes</li>
+
+        <li class="py-2 px-3 mx-1" data-target="stMainNavCampusDismissal">SMART dismissal</li>
+    </ul>
+
+        
+<style>
+.fonts-family {
+    font-family: Roboto,Verdana,Geneva,sans-serif;
+}
+</style>
+
+<div class="ml-auto d-flex align-items-center">
+    <span class="badge badge-warning badge-pill mr-2">BAYTOWN HIGH SCHOOL</span>
+    <div id="accountMenuBtn" class="main-nav-action-menu-btn my-1 px-2 mx-1 text-gray-500 st-main-nav-link bg-gray-800 rounded" data-target="stMainNavAccount" onclick="openAccountMenu()">
+        <i class="fas fa-user" aria-hidden="true"></i>
+        <span class="font-semi-bold">chetu_campus@test.com</span>
+    </div>
+    <div id="divAccountDetails" class="main-nav-action-menu position-absolute rounded shadow bg-gray-200 p-4" style="top: 32px; right: 12px; z-index: 1000; width: 300px; display: none;">
+
+            <div class="mb-4 w-100">
+                <div class="badge badge-warning w-100">
+                    Development2
+                    <span>(1002)</span>
+                </div>
+            </div>
+
+<form action="/Account/LogOff" id="logoutForm" method="post"><input name="__RequestVerificationToken" type="hidden" value="1giAokmXOIf_-OC1SfecAR_e273EpUJaY68Dg1AH0hY8Lk7JXsQ29_8vYFO5xESdL0NumY2Jw3yWqC9_yLu9s3m23kWAH9f5QGEjXA4INqdq2L4j0">                <button class="btn btn-a-link mb-2" type="submit">Log off</button>
+</form>        </div>
+</div>
+
+<script type="text/javascript">
+var showingAccountSettingsMenu = false;
+
+function closeSettingsMenu(event) {
+    if ($(event.target).is('#accountMenuBtn') || $(event.target).is('#accountMenuBtn *')) {
+        $('#accountMenuBtn').addClass('active');
+        $('#divAccountDetails').show();
+        showingAccountSettingsMenu = true;
+    }
+    else if (!$(event.target).is('#divAccountDetails') && !$(event.target).is('#divAccountDetails *') && showingAccountSettingsMenu) {
+        $('#accountMenuBtn').removeClass('active');
+        $('#divAccountDetails').hide();
+        showingAccountSettingsMenu = false;
+
+        // remove listener when destroying the widget
+        window.removeEventListener("click", closeSettingsMenu);
+    }
+}
+
+function openAccountMenu() {
+    $('#accountMenuBtn').addClass('active');
+    $('#divAccountDetails').show();
+    // add when widget loads
+    window.addEventListener("click", closeSettingsMenu);
+    showingAccountSettingsMenu = true;
+}
+</script>
+</div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+      integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"
+      integrity="sha512-XKa9Hemdy1Ui3KSGgJdgMyYlUg1gM+QhL6cnlyTe2qzMCYm4nAZ1PsVerQzTTXzonUR+dmswHqgJPuwCq1MaAg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js"
+      integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
